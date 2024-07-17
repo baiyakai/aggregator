@@ -1,9 +1,10 @@
 name: Collect
 on:
-  # executed once a week on Sunday and Wednesday at 04:00
+  # Three times a week: Monday 00:00, Wednesday 08:00, Friday 16:00 
   schedule:
-    - cron: "0 4 * * 0"  
-    - cron: "0 4 * * 3"  
+    - cron: "0 0 * * 1"
+    - cron: "0 8 * * 3"
+    - cron: "0 16 * * 5"
   workflow_dispatch:
 
 concurrency:
